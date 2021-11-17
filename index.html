@@ -74,13 +74,13 @@
                 border: 2px solid salmon;
             }
             /* EX8) Write a selector to target the second post author */
-            main>div.row>.blog-main:nth-child(2) {
+            .blog-post:nth-child(3) h2+p a {
                 color: slategray;
                 background-color: springgreen;
             }
-             /* EX9) Write a selector to target the "back to top" link      */
+             /* EX9) Write a selector to target the "back to top" link     p:last-of-type a */
             footer p:last-of-type a{
-                color:rgb(202, 52, 202);
+                color:rgb(202, 52, 202); 
                 border: 5px dotted rosybrown;
                 font-size: 35px;
             }
@@ -90,7 +90,7 @@
                 background-color:red!important;
             }
         
-    </style>
+    
 
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -450,11 +450,9 @@
         //   JS Exercises
         //   EX11) Write a function to add a new link into the navbar
         const addLink = function(){
-            let nav = document.querySelector("nav")[0]
-            let newA = document.createElement("a")
-            newA.innerText = "New"
-            newA.classList.addClass("p-2 text-muted")
-            nav.appendChild("newA")
+            let nav = document.querySelector("nav")
+            new.innerHTML += `<a href="http//google.com" class="p-2 text-muted">New</a>`
+            
         }
 
 
@@ -478,9 +476,8 @@
         
         //   EX14) Write a function to remove all the links under "Elsewhere"
         const removeLink = function(){
-            let links = document.querySelectorAll("aside div:last-child ol li")
-            for(let i = 0; i < links.length; i++)
-            links.pop()
+            let links = document.querySelector("aside div:last-of-type li")
+           links.innerHTML=""
         }
         //   EX15) Write a function to change the column size for heading in jumbotron
         const changeJumbotronBg = function(){
@@ -491,11 +488,18 @@
         //   EX16) Write a function to remove the "Search" magnifying glass icon
         const removeIcon = function(){
             let icon = document.querySelector("header>row>div:last-chile >a")
+            icon.style.display="none"
         }
         //   EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+        const minimizeP = function(){
+
+        }
         //   EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+
         //   EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+
         //   EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+
       
     </script>
 </body>
